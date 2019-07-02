@@ -81,12 +81,13 @@ function removeFromCart(item) {
 
   for(var i=0;i<cart.length;i++)
   {
-
     if((cart.includes(item)==false))
       {
         result.push("That item is not in your cart.");
 
       }
+
+  
  if(cart[i].itemName==item)
 
     {
@@ -94,14 +95,13 @@ function removeFromCart(item) {
 
       cart.splice(i,1);
       result.push(cart);
-
-
+      
 
     }
 
 
 }
-return result;
+return "That item is not in your cart.";
 }
 
 function placeOrder(cardNumber) {
